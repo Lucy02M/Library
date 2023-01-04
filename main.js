@@ -10,6 +10,7 @@ function Book(name, author) {
 function addBookToLibrary() {
     const newBook = new Book(bname.value, bauthor.value);
     myLibrary.push(newBook);
+    displayBook();
 }
 
 function displayBook() {
