@@ -1,4 +1,6 @@
 let myLibrary = [];
+const bname = document.querySelector("#name");
+const bauthor = document.querySelector("#author");
 
 function Book(name, author) {
     this.name = name
@@ -6,18 +8,15 @@ function Book(name, author) {
 }
 
 function addBookToLibrary() {
-    const newBook = new Book($name.value, $author.value);
+    const newBook = new Book(bname.value, bauthor.value);
     myLibrary.push(newBook);
 }
 
 function displayBook() {
-    const getBook = document.getElementById('getBook');
-    const nameInp = document.getElementById('bookName');
-    const authorInp = document.getElementById('author');
-    const showBook =document.getElementById('showName');
-    const showAuthor =document.getElementById('showAuthor');
-    showBook.innerHTML = nameInp.value;
-    showAuthor.innerHTML = authorInp.value;
-    nameInp.value = '';
-    author.value = '';
+    const showBook = document.getElementById('showName');
+    const showAuthor = document.getElementById('showAuthor');
+    showBook.innerHTML = bname.value;
+    showAuthor.innerHTML = bauthor.value;
+    bname.value = '';
+    bauthor.value = '';
 }
