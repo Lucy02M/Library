@@ -10,14 +10,25 @@ function Book(name, author) {
 function addBookToLibrary() {
     const newBook = new Book(bname.value, bauthor.value);
     myLibrary.push(newBook);
-    displayBook();
+    render();
+    cleanInput();
 }
 
-function displayBook() {
-    const showBook = document.getElementById('showName');
-    const showAuthor = document.getElementById('showAuthor');
-    showBook.innerHTML = bname.value;
-    showAuthor.innerHTML = bauthor.value;
+function render() {
+    showBooks.innerHTML = "";
+    myLibrary.forEach((book) => {
+        const htmlBook = `
+        <tr>
+          <td>${book.name}</td>
+          <td>${book.author}</td>
+        </tr>
+        `;
+      showBooks.insertAdjacentHTML("afterbegin", htmlBook);
+    });
+  }
+
+  function cleanInput() {
     bname.value = '';
     bauthor.value = '';
-}
+  };
+  

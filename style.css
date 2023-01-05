@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 50px;
+    border: 2px solid ;
 }
 
 .name, .author{
