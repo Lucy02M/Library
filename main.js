@@ -23,16 +23,24 @@ function addBookToLibrary() {
 
 function render() {
     showBooks.innerHTML = "";
-    myLibrary.forEach((book) => {
+    const currentBook = myLibrary.forEach((book) => {
         const htmlBook = `
         <tr>
           <td>${book.name}</td>
           <td>${book.author}</td>
+          <button id="remove">x</button>
         </tr>
         `;
       showBooks.insertAdjacentHTML("afterbegin", htmlBook);
+      const removeBtn = document.getElementById('remove')
+      removeBtn.addEventListener('click', () => {
+        myLibrary.splice(myLibrary.indexOf(book),1);
+        render();
+    })
     });
   }
+
+
 
   function cleanInput() {
     bname.value = '';
@@ -40,4 +48,5 @@ function render() {
     newBook.style.display = 'flex';
     getBook.style.display = 'none';
   };
+
   
