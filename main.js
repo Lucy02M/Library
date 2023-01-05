@@ -31,7 +31,6 @@ function render() {
         <tr>
           <td>${book.name}</td>
           <td>${book.author}</td>
-          <button id="remove">x</button>
         </tr>
         `;
 
@@ -40,8 +39,12 @@ function render() {
         const bookName = document.createElement('button');
         bookName.textContent = book.isRead;
 
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'x';
+
         showBooks.appendChild(card);
         card.insertAdjacentHTML("afterbegin", htmlBook);
+        card.append(removeBtn);
         card.append(bookName);
 
       bookName.addEventListener('click', () => {
@@ -55,7 +58,6 @@ function render() {
         }
       })
 
-      const removeBtn = document.getElementById('remove')
       removeBtn.addEventListener('click', () => {
         myLibrary.splice(myLibrary.indexOf(book),1);
         render();
