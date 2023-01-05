@@ -35,7 +35,23 @@ function render() {
         </tr>
         `;
       
+        const bookName = document.createElement('button');
+        bookName.textContent = book.isRead;
+
+
       showBooks.insertAdjacentHTML("afterbegin", htmlBook);
+      showBooks.appendChild(bookName);
+
+      bookName.addEventListener('click', () => {
+        if(book.isRead == true){
+          book.isRead = false;
+          render();
+        }
+        else {
+          book.isRead = true;
+          render();
+        }
+      })
 
       const removeBtn = document.getElementById('remove')
       removeBtn.addEventListener('click', () => {
