@@ -3,12 +3,13 @@ const bname = document.querySelector("#name");
 const bauthor = document.querySelector("#author");
 const newBook = document.getElementById('newBook')
 const getBook = document.getElementById('getBook')
+const isRead = document.getElementById('isRead');
 
 
-function Book(name, author, status) {
+function Book(name, author, isRead) {
     this.name = name
     this.author = author
-    this.status = status
+    this.isRead = isRead
 }
 
 function getNewBook() {
@@ -17,7 +18,7 @@ function getNewBook() {
 }
 
 function addBookToLibrary() {
-    const newBook = new Book(bname.value, bauthor.value);
+    const newBook = new Book(bname.value, bauthor.value, isRead.checked);
     myLibrary.push(newBook);
     render();
     cleanInput();
@@ -31,24 +32,11 @@ function render() {
           <td>${book.name}</td>
           <td>${book.author}</td>
           <button id="remove">x</button>
-          <input type="checkbox" id="switchT" class="checkbox" name="switchT">
-          <label for="switchT" id="toggle" class="toggle">
-            <p>Read Not read</p>
-        </div>
         </tr>
         `;
-    
-
+      
       showBooks.insertAdjacentHTML("afterbegin", htmlBook);
-     
-      /*toggleS.onclick = function(){
-        if(switchT.checked == 1) {
-          Book.status = 'Read';
-        }
-        else {
-          Book.status = 'Read';
-        }
-       };*/
+
       const removeBtn = document.getElementById('remove')
       removeBtn.addEventListener('click', () => {
         myLibrary.splice(myLibrary.indexOf(book),1);
