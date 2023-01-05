@@ -34,13 +34,15 @@ function render() {
           <button id="remove">x</button>
         </tr>
         `;
+
+        const card = document.createElement('div');
       
         const bookName = document.createElement('button');
         bookName.textContent = book.isRead;
 
-
-      showBooks.insertAdjacentHTML("afterbegin", htmlBook);
-      showBooks.appendChild(bookName);
+        showBooks.appendChild(card);
+        card.insertAdjacentHTML("afterbegin", htmlBook);
+        card.append(bookName);
 
       bookName.addEventListener('click', () => {
         if(book.isRead == true){
