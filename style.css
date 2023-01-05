@@ -11,7 +11,7 @@
     display : inline-block;
     width : 100px;
     height : 30px;
-    background-color: red;
+    background: red;
     border-radius: 30px;
     border: 1px solid gray;
     display: flex;
@@ -43,7 +43,7 @@ p {
 }
 
 .checkbox:checked + .toggle {
-    background-color: green;
+    background: green;
 }
        
 .checkbox {
