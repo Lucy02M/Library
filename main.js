@@ -29,6 +29,7 @@ function render() {
           <td>${book.name}</td>
           <td>${book.author}</td>
           <button id="remove">x</button>
+          
         </tr>
         `;
       showBooks.insertAdjacentHTML("afterbegin", htmlBook);
@@ -39,8 +40,6 @@ function render() {
     })
     });
   }
-
-
 
   function cleanInput() {
     bname.value = '';
