@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="icon" href="icon2.png" type="image/icon type">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" href="icon2.png" type="image/icon type" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <button onclick="getNewBook()" id="newBook">New Book</button>
-        <div id="getBook">
-            <label for="bookName">Name:</label>
-                <input type="text" name="bookName" value="" id="name">
-            <label for="author">Author:</label>
-                <input type="text" name="author" value="" id="author">
-            <label for="isRead">Have you read this?</label>
-                <input type="checkbox" name="isRead" id="isRead">
-            <button type="submit" onclick="addBookToLibrary()">Submit</button>
-        </div>
-    <div id="showBooks">
+    <div id="getBook">
+      <label for="bookName">Name:</label>
+      <input type="text" name="bookName" value="" id="name" />
+      <label for="author">Author:</label>
+      <input type="text" name="author" value="" id="author" />
+      <label for="isRead">Have you read it?</label>
+      <input type="checkbox" name="isRead" id="isRead" />
+      <button type="submit" onclick="addBookToLibrary()">Submit</button>
     </div>
-</body>
-<script src="main.js"></script>
+    <div id="showBooks"></div>
+  </body>
+  <script src="main.js"></script>
 </html>
