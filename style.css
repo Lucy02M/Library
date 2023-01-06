@@ -33,8 +33,16 @@ body{
 .card{
     background: red;
     margin: 10px;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     display: flex;
     color: aliceblue;
     flex-direction: column;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+
+.btn{
+    border: none;
+    margin: 5px 0;
+    
 }

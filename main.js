@@ -27,32 +27,39 @@ function render() {
   showBooks.innerHTML = "";
   const currentBook = myLibrary.forEach((book) => {
     const htmlBook = `
-        <tr>
-          <td>${book.name}</td>
-          <td>${book.author}</td>
-        </tr>
+          <p>"${book.name}"</p>
+          <p>by</p>
+          <p>${book.author}.</p>
         `;
 
     const card = document.createElement("div");
     card.classList.add("card");
 
     const bookName = document.createElement("button");
+    bookName.classList.add('btn');
     function readStatus() {
       if(book.isRead == true) {
         bookName.textContent = 'Read';
+        bookName.style.background = 'green';
       } else {
         bookName.textContent = 'Not read';
+        bookName.style.background = 'red';
       }
     }
     readStatus();
 
+    const btnCard = document.createElement("div");
+    btnCard.classList.add('btns');
+
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
+    removeBtn.classList.add('btn');
 
     showBooks.prepend(card);
-    card.insertAdjacentHTML("afterbegin", htmlBook);
-    card.append(bookName);
-    card.append(removeBtn);
+    card.insertAdjacentHTML("afterbegin", htmlBook.toUpperCase());
+    card.append(btnCard);
+    btnCard.append(bookName);
+    btnCard.append(removeBtn);
 
     bookName.addEventListener("click", () => {
       if (book.isRead == true) {
