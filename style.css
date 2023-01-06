@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 #getBook{
@@ -8,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: aquamarine;
-    padding: 20px 0 20px 0;
+    padding-bottom: 20px;
 }
 
 .bookInfo{
@@ -21,6 +22,15 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: aquamarine;
+    padding: 10px 10vw;
+    height: 10vh;
+}
+
+#main{
+    background-color: blue;
+    min-height: 80vh;
+    margin: 0;
+
 }
 
 #showBooks{
@@ -42,7 +52,7 @@ body{
     font-size: 20px;
     flex-wrap: wrap;
     overflow-wrap: break-word;
-    width: 25vw;
+    width: 300px;
     height: 25vh;
     line-break: auto;
 }
@@ -57,8 +67,8 @@ body{
 
 .btn{
     margin-bottom: 5px;
-    height: 3vh;
-    width: 12vw;
+    height:30px;
+    width: 150px;
 }
 
 .Rbtn {
@@ -67,4 +77,15 @@ body{
 
 .Nbtn {
     margin-right: 2px;
+}
+
+#footer{
+    margin: 0;
+    height: 70px;
+    padding-top: 10px;
+    background-color: aqua;
+    position:relative;
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
 }

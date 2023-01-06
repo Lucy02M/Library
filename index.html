@@ -13,19 +13,23 @@
         <h1>Library</h1>
         <button onclick="getNewBook()" id="newBook">+ Add Book</button>
     </div>
-    <div id="getBook">
-      <div class="bookInfo">
-      <label for="bookName">Name:</label>
-      <input type="text" name="bookName" value="" id="name" /></div>
-      <div class="bookInfo">
-      <label for="author">Author:</label>
-      <input type="text" name="author" value="" id="author" /></div>
-      <div class="bookInfo">
-      <label for="isRead">Have you read it?</label>
-      <input type="checkbox" name="isRead" id="isRead" /></div>
-      <button type="submit" onclick="addBookToLibrary()">Submit</button>
+    <div id="main">
+      <div id="getBook">
+        <div class="bookInfo">
+        <label for="bookName">Name:</label>
+        <input type="text" name="bookName" value="" id="name" /></div>
+        <div class="bookInfo">
+        <label for="author">Author:</label>
+        <input type="text" name="author" value="" id="author" /></div>
+        <div class="bookInfo">
+        <label for="isRead">Have you read it?</label>
+        <input type="checkbox" name="isRead" id="isRead" /></div>
+        <button type="submit" onclick="addBookToLibrary()">Submit</button>
+      </div>
+    <div id="showBooks"></div></div>
+    <div id="footer">
+      <p>@Lucy02M on <a href="https://github.com/Lucy02M/Library">GitHub</a></p>
     </div>
-    <div id="showBooks"></div>
   </body>
   <script src="main.js"></script>
 </html>
