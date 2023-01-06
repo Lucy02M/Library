@@ -1,8 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 #getBook{
-    display: flex;
-    flex-direction: column;
+    display: none;
     align-items: center;
-    
+    justify-content: center;
+    background-color: aquamarine;
+    padding: 20px 0 20px 0;
+}
+
+.bookInfo{
+   margin: 0 10px 0 10px;
 }
 
 
@@ -11,4 +21,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: aquamarine;
+}
+
+#showBooks{
+    display: flex;
 }
