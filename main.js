@@ -1,6 +1,6 @@
 let myLibrary = [];
-const bname = document.querySelector("#name");
-const bauthor = document.querySelector("#author");
+const bName = document.querySelector("#name");
+const bAuthor = document.querySelector("#author");
 const newBook = document.getElementById("newBook");
 const getBook = document.getElementById("getBook");
 const isRead = document.getElementById("isRead");
@@ -17,7 +17,7 @@ function getNewBook() {
 }
 
 function addBookToLibrary() {
-  const newBook = new Book(bname.value, bauthor.value, isRead.checked);
+  const newBook = new Book(bName.value, bAuthor.value, isRead.checked);
   myLibrary.push(newBook);
   render();
   cleanInput();
@@ -64,8 +64,8 @@ function render() {
 }
 
 function cleanInput() {
-  bname.value = "";
-  bauthor.value = "";
+  bName.value = "";
+  bAuthor.value = "";
   newBook.style.display = "flex";
   getBook.style.display = "none";
 }
