@@ -10,24 +10,34 @@
   </head>
   <body>
     <div class="header">
-        <h1>Library</h1>
-        <button onclick="getNewBook()" id="newBook">+ Add Book</button>
+      <h1>Library</h1>
+      <button onclick="getNewBook()" id="newBook">+ Add Book</button>
     </div>
     <div id="main">
       <div id="getBook">
         <div class="bookInfo">
-        <label for="bookName">Name:</label>
-        <input type="text" name="bookName" value="" id="name" /></div>
-        <div class="bookInfo">
-        <label for="author">Author:</label>
-        <input type="text" name="author" value="" id="author" /></div>
-        <div class="container">
-        <label for="isRead">Have you read it?<input type="checkbox" name="isRead" id="isRead" />
-          <span class="checkmark"></span></label>
+          <label for="bookName">Name:</label>
+          <input type="text" name="bookName" value="" id="name" />
         </div>
-        <button type="submit" onclick="addBookToLibrary()" id="subBtn">Submit</button>
+        <div class="bookInfo">
+          <label for="author">Author:</label>
+          <input type="text" name="author" value="" id="author" />
+        </div>
+        <div class="container">
+          <label for="isRead"
+            >Have you read it?<input
+              type="checkbox"
+              name="isRead"
+              id="isRead" />
+            <span class="checkmark"></span
+          ></label>
+        </div>
+        <button type="submit" onclick="addBookToLibrary()" id="subBtn">
+          Submit
+        </button>
       </div>
-    <div id="showBooks"></div></div>
+      <div id="showBooks"></div>
+    </div>
     <div id="footer">
       <p>@Lucy02M on <a href="https://github.com/Lucy02M/Library">GitHub</a></p>
     </div>

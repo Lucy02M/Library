@@ -32,26 +32,26 @@ function render() {
     card.classList.add("card");
 
     const bookName = document.createElement("button");
-    bookName.classList.add('btn');
-    bookName.classList.add('Nbtn');
+    bookName.classList.add("btn");
+    bookName.classList.add("Nbtn");
     function readStatus() {
-      if(book.isRead == true) {
-        bookName.textContent = 'Read';
-        bookName.style.background = '#ADC178';
+      if (book.isRead == true) {
+        bookName.textContent = "Read";
+        bookName.style.background = "#ADC178";
       } else {
-        bookName.textContent = 'Not read';
-        bookName.style.background = '#C27C78';
+        bookName.textContent = "Not read";
+        bookName.style.background = "#C27C78";
       }
     }
     readStatus();
 
     const btnCard = document.createElement("div");
-    btnCard.classList.add('btns');
+    btnCard.classList.add("btns");
 
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "X";
-    removeBtn.classList.add('btn');
-    removeBtn.classList.add('Rbtn');
+    removeBtn.classList.add("btn");
+    removeBtn.classList.add("Rbtn");
 
     showBooks.prepend(card);
     card.insertAdjacentHTML("afterbegin", htmlBook.toUpperCase());

@@ -1,234 +1,240 @@
-:root{
-    --white:#F0EAD2;
-    --lightgreen: #DDE5B6;
-    --darkgreen:#ADC178;
-    --lightbrown:#A98467;
-    --darbrown:#A98467;
-    --rose:#C27C78;
+:root {
+  --white: #f0ead2;
+  --lightgreen: #dde5b6;
+  --darkgreen: #adc178;
+  --lightbrown: #a98467;
+  --darbrown: #a98467;
+  --rose: #c27c78;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
 
-*{
-    font-family: 'Anonymous Pro', monospace;
+* {
+  font-family: "Anonymous Pro", monospace;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
-#newBook{
-    background-color: var(--rose);
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 1px #aa8c748e;
-    color: var(--white);
-    font-weight: bold;
+#newBook {
+  background-color: var(--rose);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px #aa8c748e;
+  color: var(--white);
+  font-weight: bold;
 }
 
-#newBook:hover, #subBtn:hover, .btn:hover{
-    filter: opacity(80%);
-    cursor: pointer;
+#newBook:hover,
+#subBtn:hover,
+.btn:hover {
+  filter: opacity(80%);
+  cursor: pointer;
 }
 
-#newBook:active, #subBtn:active, .btn:active{
-    filter: opacity(50%);
+#newBook:active,
+#subBtn:active,
+.btn:active {
+  filter: opacity(50%);
 }
 
-#getBook{
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--darkgreen);
-    padding-bottom: 20px;
-    color:var(--white);
-    font-weight: bold;
-    font-size: 17px;
+#getBook {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkgreen);
+  padding-bottom: 20px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 17px;
 }
 
-#name, #author{
-    background-color: var(--white);
-    border: none;
-    border-radius: 10px;
-    height: 20px;
-    color: var(--rose);
-    font-weight: bold;
-    padding: 0 10px;
+#name,
+#author {
+  background-color: var(--white);
+  border: none;
+  border-radius: 10px;
+  height: 20px;
+  color: var(--rose);
+  font-weight: bold;
+  padding: 0 10px;
 }
 
-#name:hover, #author:hover, #name:focus, #author:focus{
-    cursor: pointer;
-    background-color: var(--lightgreen);
-    outline: none;
+#name:hover,
+#author:hover,
+#name:focus,
+#author:focus {
+  cursor: pointer;
+  background-color: var(--lightgreen);
+  outline: none;
 }
 
 .container {
-    position: relative;
-    cursor: pointer;
-  }
-  .container input {
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    
-  }
-
-  .checkmark:hover{
-    cursor: pointer;
-  }
-
-  .checkmark {
-    position: absolute;
-    top: -0.2rem;
-    left: 12rem;
-    height: 25px;
-    width: 25px;
-    background-color:var(--white);
-    border-radius: 5px;
-  }
-  .container:hover input ~ .checkmark {
-    background-color:var(--lightgreen);
-  }
-
-  .container input:checked ~ .checkmark {
-    background-color: var(--rose);
-  }
-
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-#subBtn{
-    background-color: var(--rose);
-    border: none;
-    padding: 5px 15px;
-    color: var(--white);
-    font-weight: bold;
-    border-radius: 10px;
-    font-size: 17px;
-    box-shadow: 0px 0px 5px 1px #aa8c748e;
-    margin-left: 65px;
+  position: relative;
+  cursor: pointer;
+}
+.container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
-.bookInfo{
-   margin: 0 20px 0 20px;
+.checkmark:hover {
+  cursor: pointer;
 }
 
-
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--darkgreen);
-    padding: 10px 15vw;
-    height: 10vh;
+.checkmark {
+  position: absolute;
+  top: -0.2rem;
+  left: 12rem;
+  height: 25px;
+  width: 25px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.container:hover input ~ .checkmark {
+  background-color: var(--lightgreen);
 }
 
-h1{
-    color: var(--white);
+.container input:checked ~ .checkmark {
+  background-color: var(--rose);
 }
 
-#main{
-    background-color: var(--white);
-    min-height: 80vh;
-    margin: 0;
-    box-shadow: inset 0px 6px 15px 8px #e2c9b5a9;
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-#showBooks{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.card{
-    background: var(--darbrown);
-    margin: 10px;
-    padding: 20px 10px 0px 10px;
-    display: flex;
-    color: var(--white);
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
-    width: 300px;
-    height: 25vh;
-    line-break: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 1px #a9846793;
-    font-weight: bold;
+#subBtn {
+  background-color: var(--rose);
+  border: none;
+  padding: 5px 15px;
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 17px;
+  box-shadow: 0px 0px 5px 1px #aa8c748e;
+  margin-left: 65px;
 }
 
-.btns{
-    border: none;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bookInfo {
+  margin: 0 20px 0 20px;
 }
 
-.btn{
-    height:30px;
-    border: none;
-    font-weight: bold;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--darkgreen);
+  padding: 10px 15vw;
+  height: 10vh;
+}
+
+h1 {
+  color: var(--white);
+}
+
+#main {
+  background-color: var(--white);
+  min-height: 80vh;
+  margin: 0;
+  box-shadow: inset 0px 6px 15px 8px #e2c9b5a9;
+}
+
+#showBooks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--darbrown);
+  margin: 10px;
+  padding: 20px 10px 0px 10px;
+  display: flex;
+  color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  width: 300px;
+  height: 25vh;
+  line-break: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px #a9846793;
+  font-weight: bold;
+}
+
+.btns {
+  border: none;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  height: 30px;
+  border: none;
+  font-weight: bold;
 }
 
 .Rbtn {
-    border-radius:10px 0 0 0;
-    width: 70px;
-    margin: 0 0px 0 50px;
-    background-color: var(--lightgreen);
-    color: var(--darbrown);
+  border-radius: 10px 0 0 0;
+  width: 70px;
+  margin: 0 0px 0 50px;
+  background-color: var(--lightgreen);
+  color: var(--darbrown);
 }
 
 .Nbtn {
-    border-radius: 0 10px 0 0;
-    width: 200px;
-    margin:0 0px 0 -10px;
-    color: var(--white);
+  border-radius: 0 10px 0 0;
+  width: 200px;
+  margin: 0 0px 0 -10px;
+  color: var(--white);
 }
 
-#footer{
-    margin: 0;
-    height: 70px;
-    padding-top: 10px;
-    background-color: var(--darkgreen);
-    position:relative;
-    display: flex;
-    align-items:baseline;
-    justify-content: center;
-    color: #975652;
+#footer {
+  margin: 0;
+  height: 70px;
+  padding-top: 10px;
+  background-color: var(--darkgreen);
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: #975652;
 }
 
-a{
-    color: #975652;
-    text-decoration: none;
+a {
+  color: #975652;
+  text-decoration: none;
 }
 
-a:hover{
-    color: var(--lightgreen);
+a:hover {
+  color: var(--lightgreen);
 }
