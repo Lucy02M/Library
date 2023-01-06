@@ -34,17 +34,25 @@ function render() {
         `;
 
     const card = document.createElement("div");
+    card.classList.add("card");
 
     const bookName = document.createElement("button");
-    bookName.textContent = book.isRead;
+    function readStatus() {
+      if(book.isRead == true) {
+        bookName.textContent = 'Read';
+      } else {
+        bookName.textContent = 'Not read';
+      }
+    }
+    readStatus();
 
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "x";
+    removeBtn.textContent = "Remove";
 
-    showBooks.appendChild(card);
+    showBooks.prepend(card);
     card.insertAdjacentHTML("afterbegin", htmlBook);
-    card.append(removeBtn);
     card.append(bookName);
+    card.append(removeBtn);
 
     bookName.addEventListener("click", () => {
       if (book.isRead == true) {

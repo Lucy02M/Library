@@ -25,4 +25,16 @@ body{
 
 #showBooks{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: red;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
 }
