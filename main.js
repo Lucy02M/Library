@@ -26,17 +26,14 @@ function addBookToLibrary() {
 function render() {
   showBooks.innerHTML = "";
   const currentBook = myLibrary.forEach((book) => {
-    const htmlBook = `
-          <p>"${book.name}"</p>
-          <p>by</p>
-          <p>${book.author}.</p>
-        `;
+    const htmlBook = `<p>"${book.name}" by ${book.author}.</p>`;
 
     const card = document.createElement("div");
     card.classList.add("card");
 
     const bookName = document.createElement("button");
     bookName.classList.add('btn');
+    bookName.classList.add('Nbtn');
     function readStatus() {
       if(book.isRead == true) {
         bookName.textContent = 'Read';
@@ -54,6 +51,7 @@ function render() {
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
     removeBtn.classList.add('btn');
+    removeBtn.classList.add('Rbtn');
 
     showBooks.prepend(card);
     card.insertAdjacentHTML("afterbegin", htmlBook.toUpperCase());

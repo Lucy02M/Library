@@ -33,16 +33,38 @@ body{
 .card{
     background: red;
     margin: 10px;
-    padding: 20px 10px 10px 10px;
+    padding: 20px 10px 0px 10px;
     display: flex;
     color: aliceblue;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     font-size: 20px;
     flex-wrap: wrap;
+    overflow-wrap: break-word;
+    width: 25vw;
+    height: 25vh;
+    line-break: auto;
+}
+
+.btns{
+    border: none;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn{
-    border: none;
-    margin: 5px 0;
-    
+    margin-bottom: 5px;
+    height: 3vh;
+    width: 12vw;
+}
+
+.Rbtn {
+    margin-left: 2px;
+}
+
+.Nbtn {
+    margin-right: 2px;
 }
