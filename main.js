@@ -37,10 +37,10 @@ function render() {
     function readStatus() {
       if(book.isRead == true) {
         bookName.textContent = 'Read';
-        bookName.style.background = 'green';
+        bookName.style.background = '#ADC178';
       } else {
         bookName.textContent = 'Not read';
-        bookName.style.background = 'red';
+        bookName.style.background = '#C27C78';
       }
     }
     readStatus();
@@ -49,7 +49,7 @@ function render() {
     btnCard.classList.add('btns');
 
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
+    removeBtn.textContent = "X";
     removeBtn.classList.add('btn');
     removeBtn.classList.add('Rbtn');
 

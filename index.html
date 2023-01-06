@@ -21,10 +21,11 @@
         <div class="bookInfo">
         <label for="author">Author:</label>
         <input type="text" name="author" value="" id="author" /></div>
-        <div class="bookInfo">
-        <label for="isRead">Have you read it?</label>
-        <input type="checkbox" name="isRead" id="isRead" /></div>
-        <button type="submit" onclick="addBookToLibrary()">Submit</button>
+        <div class="container">
+        <label for="isRead">Have you read it?<input type="checkbox" name="isRead" id="isRead" />
+          <span class="checkmark"></span></label>
+        </div>
+        <button type="submit" onclick="addBookToLibrary()" id="subBtn">Submit</button>
       </div>
     <div id="showBooks"></div></div>
     <div id="footer">
