@@ -9,14 +9,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button onclick="getNewBook()" id="newBook">New Book</button>
+    <div class="header">
+        <h1>Library</h1>
+        <button onclick="getNewBook()" id="newBook">+ Add Book</button>
+    </div>
     <div id="getBook">
+      <div>
       <label for="bookName">Name:</label>
-      <input type="text" name="bookName" value="" id="name" />
+      <input type="text" name="bookName" value="" id="name" /></div>
+      <div>
       <label for="author">Author:</label>
-      <input type="text" name="author" value="" id="author" />
+      <input type="text" name="author" value="" id="author" /></div>
+      <div>
       <label for="isRead">Have you read it?</label>
-      <input type="checkbox" name="isRead" id="isRead" />
+      <input type="checkbox" name="isRead" id="isRead" /></div>
       <button type="submit" onclick="addBookToLibrary()">Submit</button>
     </div>
     <div id="showBooks"></div>
